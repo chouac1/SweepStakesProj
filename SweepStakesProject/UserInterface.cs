@@ -18,13 +18,14 @@ namespace SweepStakesProject
         //constructor
         public UserInterface()
         {
-            firstName = GetFirstName();
-            lastName = GetLastName();
-            userEmail = GetEmail();
-            userRegistrationNumber = GetRegistrationNumber()
+            Contestant contestant = new Contestant();
+            contestant.FirstName = GetFirstName();
+            contestant.LastName = GetLastName();
+            contestant.EmailAddress = GetEmail();
+            contestant.RegistrationNumber = GetRegistrationNumber();
         }
 
-        //member methods
+        ////member methods
         public string GetFirstName()
         {
             Console.WriteLine("Please enter your first name.");
@@ -46,12 +47,19 @@ namespace SweepStakesProject
             return result;
         }
 
-        public int GetRegistrationNumber()
+        public double GetRegistrationNumber()
         {
             Console.WriteLine("Please enter your registration number.");
-            int result = int.Parse(Console.ReadLine());
+            double result = double.Parse(Console.ReadLine());
             return result;
         }
 
+        public void TestMethods()
+        {
+            GetFirstName();
+            GetLastName();
+            GetEmail();
+            GetRegistrationNumber();
+        }
     }
 }

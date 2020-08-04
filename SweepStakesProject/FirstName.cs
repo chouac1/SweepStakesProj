@@ -8,5 +8,9 @@ namespace SweepStakesProject
 {
     class FirstName
     {
+        public FirstName()
+        {
+
+        }
     }
 }
