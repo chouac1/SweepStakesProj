@@ -32,7 +32,7 @@ namespace SweepStakesProject
 
         public Contestant PickWinner() 
         {
-            int randomNumber = rng.Next(0, contestants.Count);
+            int randomNumber = rng.Next(0, contestants.Count)+1;
             Contestant result = contestants[randomNumber];
             return result;
         }
