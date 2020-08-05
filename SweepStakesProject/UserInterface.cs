@@ -29,5 +29,24 @@ namespace SweepStakesProject
             return namePassThru;
         }
 
+        public static string ChooseSweepStakesMethod()
+        {
+            Console.WriteLine("Please choose a sweepstake method.");
+            Console.WriteLine("(1) Stack Manager Sweepstake");
+            Console.WriteLine("(2) Queue Manager Sweepstake");
+            string result = Console.ReadLine();
+            if (result == "1")
+            {
+                Console.WriteLine("Awesome choice! You choose a Stack Manager Sweepstake.");
+                SweepstakesStackManager sweepstakesStackManager = new SweepstakesStackManager();
+            }
+            else if (result == "2")
+            {
+                Console.WriteLine("Awesome choice! You choose a Queue Manager Sweepstake.");
+                SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
+            }
+            return result;
+        }
+
     }
 }

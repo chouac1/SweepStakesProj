@@ -31,14 +31,15 @@ namespace SweepStakesProject
         {
             myQueue.Dequeue();
         }
-        Sweepstakes ISweepstakesManager.GetSweepstakes()
+        public Sweepstakes GetSweepstakes()
         {
-            throw new NotImplementedException();
+            Sweepstakes sweepstakes = new Sweepstakes();
+            return sweepstakes;
         }
 
-        void ISweepstakesManager.InsertSweepstakes(Sweepstakes sweepstakes)
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            throw new NotImplementedException();
+            myQueue.Enqueue(sweepstakes);
         }
     }
 }
