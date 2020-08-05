@@ -45,6 +45,10 @@ namespace SweepStakesProject
                 Console.WriteLine("Awesome choice! You choose a Queue Manager Sweepstake.");
                 SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
             }
+            else
+            {
+                ChooseSweepStakesMethod();
+            }
             return result;
         }
 
