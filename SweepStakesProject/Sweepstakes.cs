@@ -18,7 +18,7 @@ namespace SweepStakesProject
         //constructor
         public Sweepstakes()
         {
-            contestants = new Dictionary<int, Contestant>(); //hold contestants
+            contestants = new Dictionary<int, Contestant>(); 
             rng = new Random();
         }
 
