@@ -8,16 +8,15 @@ namespace SweepStakesProject
 {
     class Contestant
     {
-        public string FirstName; 
-        public string LastName;
-        public string EmailAddress;
-        public double RegistrationNumber;
+        public string FirstName { get; set; } 
+        public string LastName { get; set; }
+        public string EmailAddress { get; set; }
+        public int RegistrationNumber { get; set; }
         public Contestant()
         {
-            FirstName = "";
-            LastName = "";
-            EmailAddress = "";
-            RegistrationNumber = 0;
+            FirstName = UserInterface.GatherUserInputString("Please enter your first name.");
+            LastName = UserInterface.GatherUserInputString("Please enter your last name.");
+            EmailAddress = UserInterface.GatherUserInputString("Please enter your email address.");           
         }
     }
 }

@@ -10,8 +10,7 @@ namespace SweepStakesProject
     {
         static void Main(string[] args)
         {
-            UserInterface test = new UserInterface();
-            test.TestMethods();
+
 
         }
     }

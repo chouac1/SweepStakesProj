@@ -2,64 +2,32 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SweepStakesProject
 {
-    public class UserInterface
+    public static class UserInterface
     {
         //member variables
-        public string firstName;
-        public string lastName;
-        public string userEmail;
-        public int userRegistrationNumber;
 
         //constructor
-        public UserInterface()
-        {
-            Contestant contestant = new Contestant();
-            contestant.FirstName = GetFirstName();
-            contestant.LastName = GetLastName();
-            contestant.EmailAddress = GetEmail();
-            contestant.RegistrationNumber = GetRegistrationNumber();
-        }
 
         ////member methods
-        public string GetFirstName()
+
+        public static string GatherUserInputString(string prompt)
         {
-            Console.WriteLine("Please enter your first name.");
+            Console.WriteLine(prompt);
             string result = Console.ReadLine();
             return result;
         }
 
-        public string GetLastName()
+        public static string DisplayContestantInfo(string namePassThru)
         {
-            Console.WriteLine("Please enter your last name.");
-            string result = Console.ReadLine();
-            return result;
+            Console.WriteLine($"Your winner is " + namePassThru + " !");
+            return namePassThru;
         }
 
-        public string GetEmail()
-        {
-            Console.WriteLine("Please enter your email.");
-            string result = Console.ReadLine();
-            return result;
-        }
-
-        public double GetRegistrationNumber()
-        {
-            Console.WriteLine("Please enter your registration number.");
-            double result = double.Parse(Console.ReadLine());
-            return result;
-        }
-
-        public void TestMethods()
-        {
-            GetFirstName();
-            GetLastName();
-            GetEmail();
-            GetRegistrationNumber();
-        }
     }
 }
